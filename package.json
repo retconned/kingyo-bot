@@ -10,6 +10,5 @@
   },
   "scripts": {
     "dev": "node ."
-  },
-  "devDependencies": {}
+  }
 }
