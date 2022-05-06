@@ -1,0 +1,13 @@
+{
+  "name": "kingyo-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "discord.js": "^13.6.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.0"
+  }
+}
