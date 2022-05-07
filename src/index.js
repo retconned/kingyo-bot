@@ -47,7 +47,6 @@ client.on("ready", () => {
       },
     });
 
-    // =====================================================
     const data = response.data;
     const processAPI = data.asset_events[0];
     const newSale = processAPI.asset.token_id; // token id
@@ -72,7 +71,6 @@ client.on("ready", () => {
 
     // processing fetched data
     if (lastSold === newSale) {
-      // if the last sale is the same as the new sale, do nothing
     } else {
       lastSold = newSale;
       client.channels.cache.get(process.env.CHANNEL_ID).send({
@@ -111,17 +109,7 @@ client.on("ready", () => {
     }
   };
   // run the loop function every 10 seconds (set in env file)
-
   setInterval(loopSaleFunction, process.env.INTERVAL);
-});
-
-// extra misc commands
-client.on("messageCreate", (message) => {
-  if (message.content.startsWith("ping")) {
-    console.log("pong");
-  } else if (message.content === "shutdown") {
-    console.log("Shutting down (μ_μ)");
-  }
 });
 
 client.login(process.env.BOT_TOKEN);
